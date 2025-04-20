@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import os
-import openai
+from openai import OpenAI
 from gtts import gTTS
 
 st.set_page_config(page_title="Maraman.ai", layout="centered")
@@ -18,9 +18,9 @@ if image_file:
     # Step 1: Dummy caption for now
     fake_caption = "Chest X-ray showing mild lung infection."
 
-    # Step 2: Use OpenAI to explain
-    openai.api_key = st.secrets["openai"]["api_key"]
-    response = openai.ChatCompletion.create(
+    # Step 2: Use OpenAI to explain (NEW SYNTAX)
+    client = OpenAI(api_key=st.secrets["openai"]["api_key"])
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful doctor who explains things simply."},
@@ -34,6 +34,5 @@ if image_file:
     tts = gTTS(answer)
     tts.save("voice.mp3")
     st.audio("voice.mp3")
-  
 
 
