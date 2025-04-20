@@ -39,7 +39,7 @@ if uploaded_file:
 
         try:
             response = client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-3.5-turbo",  # ✅ Updated to a model everyone has access to
                 messages=[
                     {"role": "system", "content": "You are a kind teacher who explains things like a friend."},
                     {"role": "user", "content": prompt}
