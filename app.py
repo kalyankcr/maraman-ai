@@ -1,5 +1,4 @@
-
- import streamlit as st
+import streamlit as st
 from openai import OpenAI  # ✅ New OpenAI SDK import
 from PyPDF2 import PdfReader
 from PIL import Image
