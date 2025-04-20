@@ -1,4 +1,6 @@
 streamlit
-openai>=1.3.5
+openai
+PyPDF2
+pytesseract
 Pillow
 gTTS
