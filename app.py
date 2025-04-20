@@ -33,7 +33,7 @@ if image_file:
     tts = gTTS(answer)
     tts.save("voice.mp3")
     st.audio("voice.mp3")
-    import openai
-    import os
+   import openai
+import os
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
