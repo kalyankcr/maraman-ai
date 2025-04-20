@@ -19,7 +19,7 @@ if image_file:
     fake_caption = "Chest X-ray showing mild lung infection."
 
     # Step 2: Use OpenAI to explain
-    openai.api_key = st.secrets["openai_api_key"]
+    openai.api_key = st.secrets["openai"]["api_key"]
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
