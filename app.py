@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import os
 import openai
 from gtts import gTTS
 
@@ -33,7 +34,6 @@ if image_file:
     tts = gTTS(answer)
     tts.save("voice.mp3")
     st.audio("voice.mp3")
-   import openai
-import os
+  
 
 
