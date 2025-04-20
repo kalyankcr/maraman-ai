@@ -1,6 +1,6 @@
 streamlit
-openai
-PyPDF2
+openai>=1.0.0
 pytesseract
-Pillow
-gTTS
+pillow
+PyPDF2
+gtts
